@@ -1,22 +1,15 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [user]
-	name = Georgii Staroselskii
-	email = georgii.staroselskii@emlid.com
-[alias]
-    lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    unstage = reset HEAD
-    st = status -sb
-    undo = checkout --
-    subupdate = submodule update --init --recursive
-    cpick = cherry-pick
-    branchdate =  ! ~/.git/helpers/git-branchdate-helper
-
-[merge]
-	tool = vimdiff
-	ff = only
-	conflictstyle = diff3
+	name = Aleksandr Kudriavtsev
+	email = aleksandr.kudriavtsev@emlid.com
 [core]
-	excludesfile = ~/.gitignore
-[color]
-	ui = auto
-[gpg]
-	program = gpg2
+	editor = /usr/bin/vim
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
